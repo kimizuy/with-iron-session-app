@@ -1,7 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Form = ({ errorMessage, onSubmit }) => (
+const Form = ({
+  errorMessage,
+  onSubmit
+}: {
+  errorMessage: string
+  onSubmit: (e: any) => Promise<void>
+}) => (
   <form onSubmit={onSubmit}>
     <label>
       <span>Type your GitHub username</span>
@@ -39,5 +45,5 @@ export default Form
 
 Form.propTypes = {
   errorMessage: PropTypes.string,
-  onSubmit: PropTypes.func,
+  onSubmit: PropTypes.func
 }

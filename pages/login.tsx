@@ -7,16 +7,16 @@ import fetchJson from '../lib/fetchJson'
 const Login = () => {
   const { mutateUser } = useUser({
     redirectTo: '/profile-sg',
-    redirectIfFound: true,
+    redirectIfFound: true
   })
 
   const [errorMsg, setErrorMsg] = useState('')
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: any) {
     e.preventDefault()
 
     const body = {
-      username: e.currentTarget.username.value,
+      username: e.currentTarget.username.value
     }
 
     try {
@@ -24,7 +24,7 @@ const Login = () => {
         fetchJson('/api/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(body),
+          body: JSON.stringify(body)
         })
       )
     } catch (error) {
@@ -36,7 +36,7 @@ const Login = () => {
   return (
     <Layout>
       <div className="login">
-        <Form isLogin errorMessage={errorMsg} onSubmit={handleSubmit} />
+        <Form errorMessage={errorMsg} onSubmit={handleSubmit} />
       </div>
       <style jsx>{`
         .login {

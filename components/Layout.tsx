@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from './Header'
 import PropTypes from 'prop-types'
 
-const Layout = ({ children }) => (
+const Layout = ({ children }: { children: React.ReactNode }) => (
   <>
     <Head>
       <title>With Iron Session</title>
@@ -41,5 +41,5 @@ const Layout = ({ children }) => (
 export default Layout
 
 Layout.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node
 }

@@ -30,7 +30,7 @@ const SgProfile = () => {
   )
 }
 
-function githubUrl(login) {
+function githubUrl(login: string) {
   return `https://api.github.com/users/${login}`
 }
 
