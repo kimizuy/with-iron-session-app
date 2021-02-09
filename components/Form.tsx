@@ -6,7 +6,7 @@ const Form = ({
   onSubmit
 }: {
   errorMessage: string
-  onSubmit: (e: any) => Promise<void>
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => Promise<void>
 }) => (
   <form onSubmit={onSubmit}>
     <label>

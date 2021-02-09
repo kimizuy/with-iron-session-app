@@ -12,7 +12,7 @@ const Login = () => {
 
   const [errorMsg, setErrorMsg] = useState('')
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
     const body = {
