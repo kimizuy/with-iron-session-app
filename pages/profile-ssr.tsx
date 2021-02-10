@@ -1,6 +1,5 @@
 import Layout from '../components/Layout'
 import withSession from '../lib/session'
-import PropTypes from 'prop-types'
 import { User } from '../types/user'
 
 const SsrProfile = ({ user }: { user?: User }) => {
@@ -53,12 +52,4 @@ export default SsrProfile
 
 function githubUrl(login: string) {
   return `https://api.github.com/users/${login}`
-}
-
-SsrProfile.propTypes = {
-  user: PropTypes.shape({
-    isLoggedIn: PropTypes.bool,
-    login: PropTypes.string,
-    avatarUrl: PropTypes.string
-  })
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const Form = ({
   errorMessage,
@@ -42,8 +41,3 @@ const Form = ({
 )
 
 export default Form
-
-Form.propTypes = {
-  errorMessage: PropTypes.string,
-  onSubmit: PropTypes.func
-}

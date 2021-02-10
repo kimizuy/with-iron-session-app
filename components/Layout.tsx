@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Header from './Header'
-import PropTypes from 'prop-types'
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <>
@@ -39,7 +38,3 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
 )
 
 export default Layout
-
-Layout.propTypes = {
-  children: PropTypes.node
-}
